@@ -5,8 +5,7 @@ namespace Property.Application.Interfaces;
 
 public interface ICreditCardsApplication
 {
-    Task<CreditCardResponse> AddCard(AddCreditCardRequest request);
-    Task<CreditCardResponse?> UpdateCard(UpdateCreditCardRequest request);
-    Task<CreditCardResponse?> GetCard(GetCreditCardRequest request);
-    Task<CreditCardsListResponse> ListCards(ListCreditCardsRequest request);
+    Task<CreditCardResponse> CreateAsync(CreateCreditCardRequest request);
+    Task<CreditCardResponse> UpdateAsync(UpdateCreditCardRequest request);
+    Task<CreditCardResponse> GetAsync(GetCreditCardRequest request);
 }

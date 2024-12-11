@@ -1,12 +1,20 @@
-using Prototype.Payment.Application.Services;
-using System.Text.Json.Serialization;
+using Prototype.Payment.Api.Procedures;
+using Prototype.Payment.Application;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
+// Adiciona os serviços via método de extensão
+builder.Services.AddApplicationServices();
+
+// Adiciona os serviços gRPC
 builder.Services.AddGrpc();
 
 var app = builder.Build();
 
-app.MapGrpcService<CreditCardsApplication>();
+// Configura os serviços gRPC
+app.MapGrpcService<CreditCardGrpc>();
+
+// Exposição dos endpoints REST
+app.MapControllers();
 
 app.Run();

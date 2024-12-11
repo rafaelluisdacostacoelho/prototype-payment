@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Prototype.Payment.Domain\Prototype.Payment.Domain.csproj" />
+    <ProjectReference Include="..\Prototype.Payment.Infrastructure\Prototype.Payment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
