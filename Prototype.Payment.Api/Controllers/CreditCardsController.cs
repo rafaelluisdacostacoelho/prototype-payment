@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Property.Application.Interfaces;
+using Prototype.Payment.Api.Requests;
 
 namespace Prototype.Payment.Api.Controllers;
 
@@ -10,7 +11,8 @@ public class CreditCardsController(ICreditCardsApplication creditCardsApplicatio
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(string id)
     {
-        var message = await _creditCardsApplication.Get(name);
+        var message = await _creditCardsApplication.GetCard(new GetCreditCardRequest { Id = id});
+
         return Ok(message);
     }
 }
