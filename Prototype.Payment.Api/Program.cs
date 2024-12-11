@@ -9,6 +9,9 @@ builder.Services.AddApplicationServices();
 // Adiciona os serviços gRPC
 builder.Services.AddGrpc();
 
+// Adiciona os controladores REST
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
 // Configura os serviços gRPC
