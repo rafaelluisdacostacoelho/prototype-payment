@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Application", "Prototype.Payment.Application\Prototype.Payment.Application.csproj", "{000AFF2D-525B-4037-BE1C-6C5D1AE07AEC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Sdk.Grpc", "Prototype.Payment.Sdk\Prototype.Payment.Sdk.Grpc.csproj", "{49F7896D-8CEA-4454-9C95-2DCED4D27E9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Sdk.Grpc", "Prototype.Payment.Sdk.Grpc\Prototype.Payment.Sdk.Grpc.csproj", "{49F7896D-8CEA-4454-9C95-2DCED4D27E9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype.Payment.Sdk.Rest", "Prototype.Payment.Sdk.Rest\Prototype.Payment.Sdk.Rest.csproj", "{D9EEC957-5DC0-4AB4-BD67-4D6B46D4AEEE}"
 EndProject
