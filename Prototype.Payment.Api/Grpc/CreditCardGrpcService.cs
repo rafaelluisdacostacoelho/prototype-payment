@@ -6,7 +6,7 @@ using Prototype.Payment.Api.Responses;
 
 namespace Prototype.Payment.Api.Procedures;
 
-public class CreditCardGrpc(IMediator mediator)
+public class CreditCardGrpcService(IMediator mediator)
 {
     private readonly IMediator _mediator = mediator;
 

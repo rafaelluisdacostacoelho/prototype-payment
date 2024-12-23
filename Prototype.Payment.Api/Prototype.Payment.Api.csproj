@@ -10,10 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Grpc\Protos\credit-card.proto" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.27.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
     <PackageReference Include="Grpc.Tools" Version="2.67.0">
@@ -30,10 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Configurations\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="Grpc\Protos\credit-card.proto" GrpcServices="Server" />
   </ItemGroup>
   
 </Project>

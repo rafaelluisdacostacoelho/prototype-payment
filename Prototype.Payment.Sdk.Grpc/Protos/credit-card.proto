@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "CreditCard.Grpc.Protos";
+
+package creditcard;
+
+message CreditCardRequest {
+  string id = 1;
+}
+
+message CreateCreditCardRequest {
+  string cardNumber = 1;
+  string cardholderName = 2;
+}
+
+message UpdateCreditCardRequest {
+  string id = 1;
+  string cardNumber = 2;
+  string cardholderName = 3;
+}
+
+message DeleteCreditCardRequest {
+  string id = 1;
+}
+
+message CreditCardResponse {
+  string id = 1;
+  string cardNumber = 2;
+  string cardholderName = 3;
+}
+
+
+service CreditCardGrpcService {
+  rpc GetCreditCard (CreditCardRequest) returns (CreditCardResponse);
+  rpc CreateCreditCard (CreateCreditCardRequest) returns (CreditCardResponse);
+  rpc UpdateCreditCard (UpdateCreditCardRequest) returns (CreditCardResponse);
+  rpc DeleteCreditCard (DeleteCreditCardRequest) returns (CreditCardResponse);
+}

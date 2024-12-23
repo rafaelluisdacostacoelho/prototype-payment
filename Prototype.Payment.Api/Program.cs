@@ -9,13 +9,10 @@ builder.Services.AddApplicationServices();
 // Adiciona os serviços gRPC
 builder.Services.AddGrpc();
 
-// Adiciona os controladores REST
-builder.Services.AddControllers();
-
 var app = builder.Build();
 
 // Configura os serviços gRPC
-app.MapGrpcService<CreditCardGrpc>();
+app.MapGrpcService<CreditCardGrpcService>();
 
 // Exposição dos endpoints REST
 app.MapControllers();
