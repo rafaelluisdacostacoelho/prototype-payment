@@ -34,7 +34,7 @@ internal class InMemoryCreditCardRepository : ICreditCardsRepository
         ArgumentNullException.ThrowIfNull(existingCard);
 
         existingCard.CardNumber = creditCard.CardNumber;
-        existingCard.CardholderName = creditCard.CardholderName;
+        existingCard.CardHolderName = creditCard.CardHolderName;
 
         return await Task.FromResult(existingCard);
     }

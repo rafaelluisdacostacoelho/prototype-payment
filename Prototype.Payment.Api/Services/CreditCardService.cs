@@ -1,17 +1,14 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using Grpc.Core;
+using MediatR;
 using Property.Application.Commands.CreditCards;
-using Prototype.Payment.Api.Requests;
-using Prototype.Payment.Api.Responses;
 
-namespace Prototype.Payment.Api.Controllers;
+namespace Prototype.Payment.Api.Services;
 
-public class CreditCardsController(IMediator mediator) : ControllerBase
+public class CreditCardService(IMediator mediator) : CreditCard.CreditCardService.CreditCardServiceBase
 {
     private readonly IMediator _mediator = mediator;
 
-    [HttpPost]
-    public async Task<ActionResult<CreditCardResponse>> CreateCreditCard([FromBody] CreateCreditCardRequest request)
+    public override async Task<CreditCard.CreditCardResponse> CreateCreditCard(CreditCard.CreateCreditCardRequest request, ServerCallContext context)
     {
         var command = new CreateCreditCardCommand
         {
@@ -21,13 +18,11 @@ public class CreditCardsController(IMediator mediator) : ControllerBase
 
         var creditCard = await _mediator.Send(command);
 
-        var response = new CreditCardResponse
+        return new CreditCard.CreditCardResponse
         {
             Id = creditCard.Id,
             CardNumber = creditCard.CardNumber,
             CardHolderName = creditCard.CardHolderName
         };
-
-        return Ok(response);
     }
 }

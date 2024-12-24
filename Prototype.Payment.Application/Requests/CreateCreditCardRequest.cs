@@ -2,7 +2,6 @@
 
 public class CreateCreditCardRequest
 {
-    public required string CardholderName { get; set; }
+    public required string CardHolderName { get; set; }
     public required string CardNumber { get; set; }
-    public DateTime ExpirationDate { get; set; }
 }

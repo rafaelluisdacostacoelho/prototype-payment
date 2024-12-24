@@ -3,12 +3,22 @@
     "http": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "todos",
+      "launchUrl": "",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5166"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5136"
     },
     "Container (Dockerfile)": {
       "commandName": "Docker",
@@ -18,6 +28,16 @@
         "ASPNETCORE_HTTP_PORTS": "8080"
       },
       "publishAllPorts": true
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5166/todos",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5166"
+      },
+      "distributionName": ""
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json"

@@ -8,8 +8,7 @@ namespace Property.Application.Commands.CreditCards;
 public class CreateCreditCardCommand : IRequest<CreditCardResponse>
 {
     public required string CardNumber { get; set; }
-    public required string CardholderName { get; set; }
-    public required DateTime ExpirationDate { get; set; }
+    public required string CardHolderName { get; set; }
 }
 
 public class CreateCreditCardHandler(ICreditCardsRepository repository) : IRequestHandler<CreateCreditCardCommand, CreditCardResponse>
@@ -22,8 +21,7 @@ public class CreateCreditCardHandler(ICreditCardsRepository repository) : IReque
         {
             Id = Guid.NewGuid().ToString(),
             CardNumber = request.CardNumber,
-            CardholderName = request.CardholderName,
-            ExpirationDate = request.ExpirationDate
+            CardHolderName = request.CardHolderName
         };
 
         await _repository.CreateAsync(card);
@@ -31,9 +29,8 @@ public class CreateCreditCardHandler(ICreditCardsRepository repository) : IReque
         return new CreditCardResponse
         {
             Id = card.Id,
-            CardholderName = card.CardholderName,
-            CardNumber = card.CardNumber,
-            ExpirationDate = card.ExpirationDate
+            CardHolderName = card.CardHolderName,
+            CardNumber = card.CardNumber
         };
     }
 }

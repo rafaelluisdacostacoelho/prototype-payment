@@ -2,9 +2,7 @@
 
 public class CreditCardResponse
 {
-    public string? Id { get; set; }
-    public string? CardholderName { get; set; }
-    public string? CardNumber { get; set; }
-    public DateTime ExpirationDate { get; set; }
-    public string? Cvv { get; set; }
+    public required string Id { get; set; }
+    public required string CardHolderName { get; set; }
+    public required string CardNumber { get; set; }
 }
