@@ -6,6 +6,8 @@ using Prototype.Payment.Api.Responses;
 
 namespace Prototype.Payment.Api.Controllers;
 
+[ApiController]
+[Route("api/[controller]")]
 public class CreditCardsController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;

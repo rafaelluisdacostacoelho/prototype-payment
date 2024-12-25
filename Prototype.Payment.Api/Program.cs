@@ -5,26 +5,29 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(2);
-
+    serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(1);
     serverOptions.Limits.Http2.MaxStreamsPerConnection = 100;
 });
 
-// Adiciona os serviços via método de extensão
+
+
+// Add application services through extension method
 builder.Services.AddApplicationServices();
 
-// Adiciona os serviços gRPC
+// Add gRPC
 builder.Services.AddGrpc();
+
+// Add Controllers
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-// Configura os serviços gRPC
+// Configure gRPC services
 app.MapGrpcService<CreditCardService>();
 
-// Exposição dos endpoints REST
+// Expose REST endpoints
 app.MapControllers();
 
 app.Run();
