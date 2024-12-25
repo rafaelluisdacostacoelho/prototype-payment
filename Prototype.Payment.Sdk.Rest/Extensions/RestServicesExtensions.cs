@@ -6,7 +6,7 @@ namespace Prototype.Payment.Sdk.Rest.Extensions;
 
 public static class RestServicesExtensions
 {
-    public static IServiceCollection AddGrpcClient(this IServiceCollection services, PaymentApiSettings settings)
+    public static IServiceCollection AddRestClient(this IServiceCollection services, PaymentApiSettings settings)
     {
         services.AddSingleton(provider => RestClient.For<ICreditCard>(settings?.ApiEndpoint));
 

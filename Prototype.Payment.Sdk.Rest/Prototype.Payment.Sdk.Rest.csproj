@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>Prototype.Payment.Sdk.Rest</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.0</Version>
     <Authors>Rafael Luis da Costa Coelho</Authors>
     <Description>Definition of REST</Description>
     <PackageTags>REST</PackageTags>
