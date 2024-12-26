@@ -1,5 +1,5 @@
 using Prototype.Payment.Api.Services;
-using Prototype.Payment.Application;
+using Prototype.Payment.Application.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +8,6 @@ builder.WebHost.ConfigureKestrel(serverOptions =>
     serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(1);
     serverOptions.Limits.Http2.MaxStreamsPerConnection = 100;
 });
-
-
 
 // Add application services through extension method
 builder.Services.AddApplicationServices();

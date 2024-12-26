@@ -1,6 +1,6 @@
-﻿namespace Prototype.Payment.Api.Responses;
+﻿namespace Prototype.Payment.Application.CrossCutting.Serializables.Responses;
 
-public class CreditCardResponse
+public class CreatedCreditCardResponse
 {
     public required string Id { get; set; }
     public required string CardHolderName { get; set; }

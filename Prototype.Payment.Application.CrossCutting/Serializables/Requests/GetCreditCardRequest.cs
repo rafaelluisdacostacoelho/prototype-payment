@@ -1,4 +1,4 @@
-﻿namespace Prototype.Payment.Api.Requests;
+﻿namespace Prototype.Payment.Application.CrossCutting.Serializables.Requests;
 
 public class GetCreditCardRequest
 {
