@@ -12,6 +12,8 @@
     <Authors>Rafael Luis da Costa Coelho</Authors>
     <Description>Definition of gRPC</Description>
     <PackageTags>gRPC, Protobuf</PackageTags>
+    <PackageOutputPath>$(OutputPath)</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

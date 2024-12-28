@@ -6,6 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>Prototype.Payment.Sdk.Grpc.CrossCutting</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Rafael Luis da Costa Coelho</Authors>
+    <Description>Definition of gRPC CrossCutting</Description>
+    <PackageTags>gRPC, Protobuf</PackageTags>
+    <PackageOutputPath>$(OutputPath)</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.29.2" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
