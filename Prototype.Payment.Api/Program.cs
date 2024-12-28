@@ -1,12 +1,13 @@
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Prototype.Payment.Api.Services;
 using Prototype.Payment.Application.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(serverOptions =>
+builder.WebHost.ConfigureKestrel(options =>
 {
-    serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(1);
-    serverOptions.Limits.Http2.MaxStreamsPerConnection = 100;
+    options.ListenAnyIP(5166, o => o.Protocols = HttpProtocols.Http1);
+    options.ListenAnyIP(5136, o => o.Protocols = HttpProtocols.Http2);
 });
 
 // Add application services through extension method

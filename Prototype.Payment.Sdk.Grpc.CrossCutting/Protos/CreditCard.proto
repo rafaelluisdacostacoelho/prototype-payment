@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "Prototype.Payment.Sdk.Grpc";
+
+package CreditCard;
+
+message CreateCreditCardRequest {
+  string CardNumber = 1;
+  string CardHolderName = 2;
+}
+
+message CreatedCreditCardResponse {
+  string Id = 1;
+  string CardNumber = 2;
+  string CardHolderName = 3;
+}
+
+service CreditCardGrpcService {
+  rpc CreateCreditCard (CreateCreditCardRequest) returns (CreatedCreditCardResponse);
+}

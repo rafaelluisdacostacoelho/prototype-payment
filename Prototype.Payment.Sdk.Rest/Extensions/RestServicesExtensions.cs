@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Prototype.Payment.Sdk.Rest.Configurations;
+using Prototype.Payment.Sdk.Rest.Endpoints;
 using RestEase;
 
 namespace Prototype.Payment.Sdk.Rest.Extensions;

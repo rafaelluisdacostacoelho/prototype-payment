@@ -10,30 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\credit-card.proto" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.27.0" />
-    <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.67.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Prototype.Payment.Sdk.Grpc.CrossCutting\Prototype.Payment.Sdk.Grpc.CrossCutting.csproj" />
     <ProjectReference Include="..\Prototype.Payment.Application\Prototype.Payment.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Configurations\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="Protos\credit-card.proto" GrpcServices="Server,Client" />
   </ItemGroup>
   
 </Project>

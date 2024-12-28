@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Sdk.Grpc"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Sdk.Rest", "Prototype.Payment.Sdk.Rest\Prototype.Payment.Sdk.Rest.csproj", "{D9EEC957-5DC0-4AB4-BD67-4D6B46D4AEEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype.Payment.Application.CrossCutting", "Prototype.Payment.Application.CrossCutting\Prototype.Payment.Application.CrossCutting.csproj", "{A23348B2-2F31-4A38-8640-362E8338BF23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Application.CrossCutting", "Prototype.Payment.Application.CrossCutting\Prototype.Payment.Application.CrossCutting.csproj", "{A23348B2-2F31-4A38-8640-362E8338BF23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Sdk.Grpc.CrossCutting", "Prototype.Payment.Sdk.Grpc.CrossCutting\Prototype.Payment.Sdk.Grpc.CrossCutting.csproj", "{A5E6821A-C94D-4EB5-8E54-F2C35EC1240A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A23348B2-2F31-4A38-8640-362E8338BF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A23348B2-2F31-4A38-8640-362E8338BF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A23348B2-2F31-4A38-8640-362E8338BF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E6821A-C94D-4EB5-8E54-F2C35EC1240A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E6821A-C94D-4EB5-8E54-F2C35EC1240A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E6821A-C94D-4EB5-8E54-F2C35EC1240A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E6821A-C94D-4EB5-8E54-F2C35EC1240A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,7 +20,7 @@ public static class GrpcServiceCollectionExtensions
         services.AddScoped(serviceProvider =>
         {
             var channel = serviceProvider.GetRequiredService<GrpcChannel>(); // Obtém o canal gRPC do DI
-            return new CreditCard.CreditCardService.CreditCardServiceClient(channel); // Cria o cliente passando o canal
+            return new CreditCardGrpcService.CreditCardGrpcServiceClient(channel); // Cria o cliente passando o canal
         });
 
         return services;
