@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Prototype.Payment.Sdk.Grpc</id>
+    <version>1.0.0</version>
+    <authors>Rafael Luis da Costa Coelho</authors>
+    <owners>Rafael Luis da Costa Coelho</owners>
+    <description>This package exposes the payment API as a gRPC service.</description>
+    <dependencies>
+      <dependency id="Prototype.Payment.Sdk.Grpc.CrossCutting" version="1.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\**" target="lib\netstandard2.0" />
+  </files>
+</package>
