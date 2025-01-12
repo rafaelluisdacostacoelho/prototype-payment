@@ -1,6 +1,6 @@
 # Prototype Payment
 
-This project implements REST and gRPC interfaces.
+Este projeto implementa interfaces REST e gRPC.
 
 # 1. Configuração do Ambiente de Desenvolvimento
 
