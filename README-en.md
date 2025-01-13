@@ -1,3 +1,7 @@
+# Prototype Payment
+
+This project implements REST and gRPC interfaces.
+
 # 1. Development Environment Setup
 
 We need to configure NuGet and OpenSSH. The latter will be used to create a Certificate Authority (CA) that we will use to manage certificates, which is necessary for using gRPC in a consistent manner similar to a production environment.
