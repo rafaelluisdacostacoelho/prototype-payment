@@ -8,7 +8,7 @@ public static class GrpcServiceCollectionExtensions
 {
     public static IServiceCollection AddGrpcClient(this IServiceCollection services, string serverAddress)
     {
-        var certificate = new X509Certificate2("Certificates/Client.pfx", "ClientPassword");
+        var certificate = new X509Certificate2("Certificates/Client.pfx", "Reb0rn777");
 
         var httpHandler = new HttpClientHandler();
         

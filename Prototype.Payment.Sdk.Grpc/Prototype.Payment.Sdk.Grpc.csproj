@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>Prototype.Payment.Sdk.Grpc</PackageId>
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <Authors>Rafael Luis da Costa Coelho</Authors>
     <Description>Definition of gRPC</Description>
     <PackageTags>gRPC, Protobuf</PackageTags>

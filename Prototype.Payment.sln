@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Payment.Sdk.Grpc.CrossCutting", "Prototype.Payment.Sdk.Grpc.CrossCutting\Prototype.Payment.Sdk.Grpc.CrossCutting.csproj", "{A5E6821A-C94D-4EB5-8E54-F2C35EC1240A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{ECB3AF73-3FE2-4176-A2CB-0162534C9C1F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{ECB3AF73-3FE2-4176-A2CB-0162534C9C1F}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
 		.gitignore = .gitignore
