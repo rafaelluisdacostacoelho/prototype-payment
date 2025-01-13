@@ -29,6 +29,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configura
 		Remove-BinObj.ps1 = Remove-BinObj.ps1
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Certificates", "Certificates", "{18E7A3AB-94D7-42F5-B623-9DA398938D97}"
+	ProjectSection(SolutionItems) = preProject
+		Certificates\Client.crt = Certificates\Client.crt
+		Certificates\Client.csr = Certificates\Client.csr
+		Certificates\Client.key = Certificates\Client.key
+		Certificates\Client.pfx = Certificates\Client.pfx
+		Certificates\RootCA.crt = Certificates\RootCA.crt
+		Certificates\RootCA.key = Certificates\RootCA.key
+		Certificates\RootCA.srl = Certificates\RootCA.srl
+		Certificates\Server.crt = Certificates\Server.crt
+		Certificates\Server.csr = Certificates\Server.csr
+		Certificates\Server.key = Certificates\Server.key
+		Certificates\Server.pfx = Certificates\Server.pfx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShellScripts", "ShellScripts", "{2078D6DD-1E53-4783-9642-AD24EA5A252E}"
+	ProjectSection(SolutionItems) = preProject
+		ShellScripts\Remove-BinObj.ps1 = ShellScripts\Remove-BinObj.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{5BBAEE5D-86D8-4061-BC46-0EC93E30E0BB}"
+	ProjectSection(SolutionItems) = preProject
+		Images\install-certificate.png = Images\install-certificate.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +95,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{18E7A3AB-94D7-42F5-B623-9DA398938D97} = {ECB3AF73-3FE2-4176-A2CB-0162534C9C1F}
+		{2078D6DD-1E53-4783-9642-AD24EA5A252E} = {ECB3AF73-3FE2-4176-A2CB-0162534C9C1F}
+		{5BBAEE5D-86D8-4061-BC46-0EC93E30E0BB} = {ECB3AF73-3FE2-4176-A2CB-0162534C9C1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1436C54F-FB04-465F-BA4F-9F50B3A1E9A1}

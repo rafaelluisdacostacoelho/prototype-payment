@@ -6,7 +6,7 @@ namespace Prototype.Payment.Sdk.Grpc.Extensions;
 
 public static class GrpcServiceCollectionExtensions
 {
-    public static IServiceCollection AddGrpcClient(this IServiceCollection services)
+    public static IServiceCollection AddGrpcClient(this IServiceCollection services, string serverAddress)
     {
         var certificate = new X509Certificate2("Certificates/Client.pfx", "ClientPassword");
 
@@ -19,7 +19,7 @@ public static class GrpcServiceCollectionExtensions
             HttpHandler = httpHandler
         };
 
-        using var grpcChannel = GrpcChannel.ForAddress("", grpcChannelOptions);
+        using var grpcChannel = GrpcChannel.ForAddress(serverAddress, grpcChannelOptions);
 
         services.AddSingleton(grpcChannel);
 

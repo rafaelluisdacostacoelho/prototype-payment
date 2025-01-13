@@ -1,21 +1,25 @@
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
 using Prototype.Payment.Api.Services;
 using Prototype.Payment.Application.Extensions;
 using System.Security.Cryptography.X509Certificates;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(options =>
+builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    options.ListenAnyIP(5136, listenOptions =>
+    serverOptions.ListenAnyIP(5136, listenOptions =>
     {
-        var certificate = new X509Certificate2("Certificates/Server.pfx", "AlgumaSenha");
+        var certificate = new X509Certificate2("Certificates/Server.pfx", "Reb0rn777");
         var httpHandler = new HttpClientHandler();
 
         httpHandler.ClientCertificates.Add(certificate);
 
         listenOptions.Protocols = HttpProtocols.Http2;
-        listenOptions.UseHttps(certificate);
+        listenOptions.UseHttps(certificate, httpsOptions =>
+        {
+            httpsOptions.ClientCertificateMode = ClientCertificateMode.RequireCertificate;
+        });
     });
 });
 
